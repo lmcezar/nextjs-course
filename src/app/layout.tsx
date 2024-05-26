@@ -1,3 +1,4 @@
+import { Navbar } from "@/components";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
@@ -16,11 +17,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <p>Root Layout</p>
-        <button className="px-4 py-2 rounded-md bg-indigo-500 text-white hover:bg-indigo-600">
-          Teste
-        </button>
+      <body className={`${inter.className} flex gap-2`}>
+        <Navbar />
         {children}
       </body>
     </html>
