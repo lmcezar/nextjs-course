@@ -16,7 +16,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <p>Root Layout</p>
+        <button className="px-4 py-2 rounded-md bg-indigo-500 text-white hover:bg-indigo-600">
+          Teste
+        </button>
+        {children}
+      </body>
     </html>
   );
 }
