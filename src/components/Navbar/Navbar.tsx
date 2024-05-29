@@ -7,6 +7,7 @@ import {
 } from "@/components";
 
 import { cn } from "@/helpers/cn";
+import Image from "next/image";
 import logo from "../../../public/logo.png";
 import { NavbarList } from "./NavbarList";
 import { NavbarListItemLink } from "./NavbarListItemLink";
@@ -22,7 +23,13 @@ export const Navbar = ({ className, ...props }: NavbarProps) => {
       {...props}
     >
       <div className="flex items-center justify-center my-4">
-        <img src={logo.src} alt="Logo games" className="w-auto h-12 p-2" />
+        <Image
+          src={logo.src}
+          alt="Logo games"
+          className="w-auto h-12 p-2"
+          width={112}
+          height={32}
+        />
       </div>
       <NavbarList className={"flex-grow"}>
         <NavbarListItemLink href="/">
